@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include "changestr.h"
-#include <string.h>
 
 int is_three(const char* s){
     int c = 0;
@@ -14,12 +13,11 @@ int is_three(const char* s){
 int main(){
     char s[100];
     scanf("%s", s);
-    int n = strlen(s);
     if(is_three(s)){
-        change_to_number(s, n);
+        change_to_number(s);
         printf("%s\n", s); 
     }else{
-        invert_str(s, n);
+        invert_str(s);
         printf("%s\n", s);
     }
     return 0;
